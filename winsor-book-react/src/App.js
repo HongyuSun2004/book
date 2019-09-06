@@ -7,6 +7,7 @@ import Backdrop from './components/Backdrop/Backdrop';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from './components/Book/Home';
 import Books from './components/Book/Books';
+import BookOnMarket from './components/Book/BookOnMarket';
 
 class App extends Component {
   state = {
@@ -39,6 +40,7 @@ class App extends Component {
             <div>
               <Route exact path="/" component={Home} />
               <Route path="/books/:subject" component={Books} />
+              <Route path="/book/:id" component={BookOnMarket} />
             </div>
           </Router>
         </main>
