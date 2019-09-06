@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 70%;
+  width: 40%;
   max-width: 400px;
   z-index: 200;
   transform: translateX(-100%);
@@ -43,4 +43,18 @@
     .side-drawer {
         display: none;
     }
+}
+
+.subject-logo {
+  animation: subject-logo-spin infinite 10s linear;
+  height: 10vmin;
+}
+
+@keyframes subject-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
