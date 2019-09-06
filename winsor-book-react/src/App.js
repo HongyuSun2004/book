@@ -6,7 +6,7 @@ import Backdrop from './components/Backdrop/Backdrop';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from './components/Book/Home';
-import Books from './components/Book/Books';
+import BookList from './components/Book/BookList';
 import BookOnMarket from './components/Book/BookOnMarket';
 
 class App extends Component {
@@ -39,7 +39,7 @@ class App extends Component {
           <Router>
             <div>
               <Route exact path="/" component={Home} />
-              <Route path="/books/:subject" component={Books} />
+              <Route path="/books/:subject" component={BookList} />
               <Route path="/book/:id" component={BookOnMarket} />
             </div>
           </Router>

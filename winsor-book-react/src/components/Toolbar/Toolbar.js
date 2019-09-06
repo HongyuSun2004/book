@@ -9,7 +9,7 @@ const toolbar = props => (
         <div className="toolbar__toggle-button">
             <DrawerToggleButton click={props.drawerClickHandler} />
         </div>
-        <div className="toolbar__logo"><a href="/">THE LOGO</a></div>
+        <div className="toolbar__logo"><a href="/"><img src="https://www.winsor.edu/uploaded/themes/build/images/home/winsor-seal.png" alt="" height="50" width="50"></img></a></div>
         <div className="spacer" />
         <div className="toolbar_navigation-items">
             <ul>
