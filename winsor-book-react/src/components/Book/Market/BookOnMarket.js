@@ -25,7 +25,7 @@ const BookOnMarket = ({match}) => {
             <img className={style.image} src={book.image_url} alt=""></img>
 
             <AddBook4Sell></AddBook4Sell>
-            <SellerBuyer></SellerBuyer>
+
         </div>
     );
 }
