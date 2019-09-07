@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: #521751;
+  background: #860014;
   height: 56px;
 }
 
@@ -63,4 +63,10 @@
   .toolbar__logo {
     margin-left: 0;
   }
+}
+
+.textbookstitle{ 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  color: white;
 }

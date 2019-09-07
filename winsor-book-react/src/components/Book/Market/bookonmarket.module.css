@@ -14,4 +14,11 @@
     border-radius: 5%;
     width: 200px;
     height: 250px;
+    margin-bottom: 2rem;
+}
+
+.booktitle{
+    margin-top: 2rem;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

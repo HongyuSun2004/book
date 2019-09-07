@@ -20,7 +20,7 @@ const BookOnMarket = ({match}) => {
     return (
         <div className={style.bookmarket}>
 
-            <h1>{book.title}</h1>
+            <h3 className={style.booktitle}>{book.title}</h3>
             <p>ISBN-13: {book.isbn}</p>
             <img className={style.image} src={book.image_url} alt=""></img>
 
