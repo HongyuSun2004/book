@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import Book from './Book';
+import AddBook4Sell from './AddBook4Sell'
+import SellerBuyer from './SellerBuyer';
+import style from './bookonmarket.module.css';
 
 const BookOnMarket = ({match}) => {
     const [book, setBook] = useState([]);
@@ -16,14 +18,14 @@ const BookOnMarket = ({match}) => {
     }, []);
 
     return (
-        <div>
-            <Book 
-                key={book.id}
-                title={book.title}
-                isbn={book.isbn}
-                image={book.image_url}>
-            </Book>
-            buy
+        <div className={style.bookmarket}>
+
+            <h1>{book.title}</h1>
+            <p>ISBN-13: {book.isbn}</p>
+            <img className={style.image} src={book.image_url} alt=""></img>
+
+            <AddBook4Sell></AddBook4Sell>
+            <SellerBuyer></SellerBuyer>
         </div>
     );
 }

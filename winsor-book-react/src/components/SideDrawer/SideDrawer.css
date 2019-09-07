@@ -58,3 +58,11 @@
     transform: rotate(360deg);
   }
 }
+
+.subject-logo path {
+  transition: 250ms;
+}
+
+.subject-logo:hover path {
+  fill: #292;
+}
