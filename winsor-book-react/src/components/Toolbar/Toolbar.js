@@ -2,6 +2,7 @@ import React from 'react';
 
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 import './Toolbar.css';
+import seal from '../../winsor.png';
 
 const toolbar = props => (
   <header className="toolbar">
@@ -9,7 +10,10 @@ const toolbar = props => (
         <div className="toolbar__toggle-button">
             <DrawerToggleButton click={props.drawerClickHandler} />
         </div>
-        <div className="toolbar__logo"><a href="/"><img src="https://www.winsor.edu/uploaded/themes/build/images/home/winsor-seal.png" alt="" height="50" width="50"></img></a></div>
+        <div className="toolbar__logo">
+          <a href="/"><img src={seal} alt="" height="50" width="70"></img></a>         
+        </div>
+        <div className="textbookstitle">WINSOR TEXTBOOKS</div>
         <div className="spacer" />
         <div className="toolbar_navigation-items">
             <ul>
