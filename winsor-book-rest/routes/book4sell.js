@@ -44,8 +44,6 @@ router.get('/:id', (req,res) => {
 })
 
 router.post('/', (req,res) => {
-    console.log(req.body);
-
     let values = req.body.price.split("$")
     let price = 0;
     if(values.length > 1){
@@ -53,16 +51,12 @@ router.post('/', (req,res) => {
     }else{
         price = parseFloat(values[0]);
     }
-    
-    console.log(req.body.price);
-    console.log(price);
 
-    let sql = `insert into book_market (book_id, user_id, price, book_condition) values (${req.body.book_id}, ${req.body.user_id},${price},'${req.body.condition}')`
+    let sql = `insert into book_market (book_id, user_id, price, book_condition) values (${req.body.book_id}, ${req.body.user_id},${price},'${req.body.book_condition}')`
     connection.query(sql, (err, result) => {
         if(err){
             return res.send(err);
         }else{
-            console.log(result)
             return res.json({
                 book4sell:result
             })

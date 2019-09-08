@@ -25,11 +25,11 @@ const BookOnMarket = ({match}) => {
             <p>ISBN-13: {book.isbn}</p>
             <img className={style.image} src={book.image_url} alt=""></img>
             
-            { match.params.id != 2 ? <SellerList book_id={match.params.id}></SellerList> : null }
+            { match.params.id !== 2 ? <SellerList book_id={match.params.id}></SellerList> : null }
 
             <AddBook4Sell book_id={match.params.id}></AddBook4Sell>
 
-            { match.params.id == 2 ? <AddBookWanted book_id={match.params.id}></AddBookWanted> : null }
+            { match.params.id === 2 ? <AddBookWanted book_id={match.params.id}></AddBookWanted> : null }
             
         </div>
     );
