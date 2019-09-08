@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react';
 import SellerList from './SellerList';
 import AddBookForSell from './AddBookForSell';
 import AddBookWished from './AddBookWished';
+import book_config from '../Book_Config';
 
 import style from './bookonmarket.module.css';
 
@@ -10,7 +11,7 @@ const BookOnMarket = ({match}) => {
     const [book, setBook] = useState([]);
 
     const getBook = async () => {
-        const request = `http://192.168.1.13:5000/book/${match.params.id}`;
+        const request = `${book_config.ws_host}/book/${match.params.id}`;
         const response = await fetch(request);
         const data = await response.json();
         setBook(data.book);

@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
+import book_config from '../Book_Config';
+
 import style from './addbookforsell.module.css';
 
 const AddBookForSell = ({book_id}) => {
@@ -18,7 +20,7 @@ const AddBookForSell = ({book_id}) => {
     const handleSubmit = event => {
         event.preventDefault();
     
-        fetch('http://192.168.1.13:5000/book_for_sell/', {
+        fetch(`${book_config.ws_host}/book_for_sell/`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

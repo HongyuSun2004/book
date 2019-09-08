@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import Book from './Book';
+import book_config from '../Book_Config';
 
 const BookList = ({match}) => {
     const [books, setBooks] = useState([]);
     
     const getBooks = async () => {
-        const request = `http://192.168.1.13:5000/books/${match.params.subject}`;
+        const request = `${book_config.ws_host}/books/${match.params.subject}`;
         const response = await fetch(request);
         const data = await response.json();
         setBooks(data.books);
