@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
+
 import SellerList from './SellerList';
-import AddBook4Sell from './AddBook4Sell';
-import AddBookWanted from './AddBookWanted';
+import AddBookForSell from './AddBookForSell';
+import AddBookWished from './AddBookWished';
 
 import style from './bookonmarket.module.css';
 
@@ -25,11 +26,11 @@ const BookOnMarket = ({match}) => {
             <p>ISBN-13: {book.isbn}</p>
             <img className={style.image} src={book.image_url} alt=""></img>
             
-            { match.params.id !== 2 ? <SellerList book_id={match.params.id}></SellerList> : null }
+            { match.params.id != 2 ? <SellerList book_id={match.params.id}></SellerList> : null }
 
-            <AddBook4Sell book_id={match.params.id}></AddBook4Sell>
+            <AddBookForSell book_id={match.params.id}></AddBookForSell>
 
-            { match.params.id === 2 ? <AddBookWanted book_id={match.params.id}></AddBookWanted> : null }
+            { match.params.id == 2 ? <AddBookWished book_id={match.params.id}></AddBookWished> : null }
             
         </div>
     );

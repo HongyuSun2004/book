@@ -1,8 +1,9 @@
 import React from 'react';
 
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
+import winsor_logo from './winsor.png';
+
 import './Toolbar.css';
-import seal from '../../winsor.png';
 
 const toolbar = props => (
   <header className="toolbar">
@@ -11,14 +12,16 @@ const toolbar = props => (
             <DrawerToggleButton click={props.drawerClickHandler} />
         </div>
         <div className="toolbar__logo">
-          <a href="/"><img src={seal} alt="" height="50" width="70"></img></a>         
+          <a href="/"><img src={winsor_logo} alt="" height="50" width="70"></img></a>         
         </div>
         <div className="textbookstitle">WINSOR TEXTBOOKS</div>
         <div className="spacer" />
         <div className="toolbar_navigation-items">
             <ul>
-                <li><a href="/">Products</a></li>
-                <li><a href="/">Users</a></li>
+                <li><a href="/">Search Books</a></li>
+                <li><a href="/">My Books For Sell</a></li>
+                <li><a href="/">My Wishlist</a></li>
+                <li><a href="/">My Profile</a></li>
             </ul>
         </div>
     </nav>

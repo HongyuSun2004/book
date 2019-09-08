@@ -1,9 +1,8 @@
 const experss = require('express');
 const router = experss.Router();
-const cores = require('cors');
 const mysql = require('mysql');
 
-const BOOK_SQL = "select * from book_market where role = 'SELL' limit 10";
+const BOOK_SQL = "select * from book_market where role = 'WISH' limit 10";
 
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -24,41 +23,34 @@ router.get('/', (req,res) => {
             return res.send(err);
         }else{
             return res.json({
-                book4sell:result
+                book_wished:result
             })
         }
     });
 });
 
 router.get('/:id', (req,res) => {
-    let sql = `select * from book_market where role = 'SELL' and book_id = '${req.params.id}'`;
+    let sql = `select * from book_market where role = 'WISH' and book_id = '${req.params.id}'`;
     connection.query(sql, (err, result) => {
         if(err){
             return res.send(err);
         }else{
             return res.json({
-                book4sell:result
+                book_wished:result
             })
         }
     });
 })
 
 router.post('/', (req,res) => {
-    let values = req.body.price.split("$")
-    let price = 0;
-    if(values.length > 1){
-        price = parseFloat(values[1]);
-    }else{
-        price = parseFloat(values[0]);
-    }
-
-    let sql = `insert into book_market (book_id, user_id, price, book_condition) values (${req.body.book_id}, ${req.body.user_id},${price},'${req.body.book_condition}')`
+    let sql = `insert into book_market (book_id, user_id, role) values (${req.body.book_id}, ${req.body.user_id},'WISH')`
+    
     connection.query(sql, (err, result) => {
         if(err){
             return res.send(err);
         }else{
             return res.json({
-                book4sell:result
+                book_wished:result
             })
         }
     });

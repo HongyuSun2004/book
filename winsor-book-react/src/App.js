@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import Toolbar from './components/Toolbar/Toolbar';
-import SideDrawer from './components/SideDrawer/SideDrawer';
-import Backdrop from './components/Backdrop/Backdrop';
+import Toolbar from './Menu/Toolbar/Toolbar';
+import SideDrawer from './Menu/SideDrawer/SideDrawer';
+import Backdrop from './Menu/Backdrop/Backdrop';
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Home from './components/Book/Home';
-import BookList from './components/Book/BookList';
-import BookOnMarket from './components/Book/Market/BookOnMarket';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from './Home/Home';
+import BookList from './Book/BookList';
+import BookOnMarket from './Market/BookOnMarket';
 
 class App extends Component {
   state = {

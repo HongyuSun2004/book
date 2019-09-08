@@ -1,11 +1,11 @@
 import React from 'react';
 
 import './SideDrawer.css';
-import math_logo from '../../svg/square-root-alt-solid.svg';
-import biology_logo from '../../svg/dna-solid.svg';
-import chemistry_logo from '../../svg/flask-solid.svg';
-import english_logo from '../../svg/pen-fancy-solid.svg';
-import history_logo from '../../svg/landmark-solid.svg';
+import math_logo from './svg/square-root-alt-solid.svg';
+import biology_logo from './svg/dna-solid.svg';
+import chemistry_logo from './svg/flask-solid.svg';
+import english_logo from './svg/pen-fancy-solid.svg';
+import history_logo from './svg/landmark-solid.svg';
 
 const sideDrawer = props => {
   let drawerClasses = 'side-drawer';
