@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import book_config from '../Book_Config';
 
-import style from './addbookforsell.module.css';
+import style from './addbookforsale.module.css';
 
-const AddBookForSell = ({book_id}) => {
+const AddBookForSale = ({book_id}) => {
     const [bookCondition, setBookCondition] = useState('Good');
     const [price, setPrice] = useState('$50');
     const [submited, setSubmited] = useState(false);
@@ -20,7 +20,7 @@ const AddBookForSell = ({book_id}) => {
     const handleSubmit = event => {
         event.preventDefault();
     
-        fetch(`${book_config.ws_host}/book_for_sell/`, {
+        fetch(`${book_config.ws_host}/book_for_sale/`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -67,4 +67,4 @@ const AddBookForSell = ({book_id}) => {
     );
 }
 
-export default AddBookForSell;
+export default AddBookForSale;

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Button, Alert } from 'react-bootstrap';
-import style from './addbookforsell.module.css';
+import style from './addbookforsale.module.css';
 
 const AddBookWished = ({book_id}) => {
     const [submited, setSubmited] = useState(false);

@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 
 const booksRoute = require('./routes/books');
 const bookRoute = require('./routes/book');
-const bookForSellRoute = require('./routes/book_for_sell');
+const bookForSaleRoute = require('./routes/book_for_sale');
 const bookWishedRoute = require('./routes/book_wished');
 
 const app = express();
@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 app.use('/books', booksRoute);
 app.use('/book', bookRoute);
-app.use('/book_for_sell', bookForSellRoute);
+app.use('/book_for_sale', bookForSaleRoute);
 app.use('/book_wished', bookWishedRoute);
 
 app.get('/', (req,res) => {

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 import SellerList from './SellerList';
-import AddBookForSell from './AddBookForSell';
+import AddBookForSale from './AddBookForSale';
 import AddBookWished from './AddBookWished';
 import book_config from '../Book_Config';
 
@@ -29,7 +29,7 @@ const BookOnMarket = ({match}) => {
             
             { match.params.id != 2 ? <SellerList book_id={match.params.id}></SellerList> : null }
 
-            <AddBookForSell book_id={match.params.id}></AddBookForSell>
+            <AddBookForSale book_id={match.params.id}></AddBookForSale>
 
             { match.params.id == 2 ? <AddBookWished book_id={match.params.id}></AddBookWished> : null }
             
